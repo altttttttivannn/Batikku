@@ -1,0 +1,38 @@
+                        @endif
+                            <div class="space-y-2">
+                                <h3 class="text-lg font-semibold">{{ $barang->nama }}</h3>
+                                <p class="text-yellow-600 font-bold">Rp {{ number_format($barang->harga, 0, ',', '.') }}</p>
+                                <p class="text-sm text-gray-600">{{ $barang->deskripsi }}</p>
+                                
+                                <!-- Informasi Stok -->
+                                <div class="grid grid-cols-4 gap-2 my-4">
+                                    @php
+                                        $hasStock = false;
+                                    @endphp
+                                    @foreach($barang->stokUkuran as $stok)
+                                        <div class="text-center p-2 rounded {{ $stok->stok > 0 ? 'bg-gray-100' : 'bg-gray-50 opacity-50' }}">
+                                            <div class="font-medium">{{ $stok->ukuran }}</div>
+                                            <div class="text-sm text-gray-600">{{ $stok->stok }}</div>
+                                        </div>
+                                        @if($stok->stok > 0)
+                                            @php
+                                                $hasStock = true;
+                                            @endphp
+                                        @endif
+                                    @endforeach
+                                </div>
+
+                                @if($hasStock)
+                                    <a href="{{ route('produk.detail', $barang->id) }}" 
+                                       class="block w-full text-center px-4 py-2 bg-black text-white rounded-lg hover:bg-yellow-500 transition-colors">
+                                        Detail
+                                    </a>
+                                @else
+                                    <div class="block w-full text-center px-4 py-2 bg-gray-300 text-gray-600 rounded-lg cursor-not-allowed">
+                                        Stok Habis
+                                    </div>
+                                @endif
+                            </div>
+                        </a>
+                    </div>
+                    @endforeach
