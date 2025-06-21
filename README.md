@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Made with ❤️](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red)
 
-![Homepage](public/WhatsApp Image 2025-06-21 at 16.44.00_d5f11d2f.jpg)
+![Homepage](public/Homepage.jpg)
 
 **Batikku** adalah aplikasi berbasis Laravel yang dirancang untuk mengelola katalog dan transaksi batik lokal secara terstruktur. Website ini memiliki **fitur lengkap**, mulai dari login, register, manajemen data produk, hingga peran admin dan user yang terpisah.
 
@@ -38,10 +38,10 @@
 
 ---
 ## 📸 Preview Website
-![Detail Produk](public/WhatsApp Image 2025-06-21 at 16.44.53_c4bc2c9d.jpg)
-![Detail Per Produk](public/WhatsApp Image 2025-06-21 at 16.45.43_03316913.jpg
-![Admin Page](public/WhatsApp Image 2025-06-21 at 16.45.43_03316913.jpg)
-![Grafik](public/WhatsApp Image 2025-06-21 at 16.46.23_cfae0eb0.jpg)
+![Detail Produk](public/Katalog.jpg)
+![Detail Per Produk](public/Produk.jpg)
+![Admin Page](public/Admin.jpg)
+![Grafik](public/Grafik.jpg)
 
 ## 🚀 Cara Menjalankan Project Ini
 
