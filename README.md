@@ -1,61 +1,46 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🧵 Batikku – Laravel CRUD for Local Batik Management
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Laravel](https://img.shields.io/badge/Laravel-10.x-red?logo=laravel)
+![Status](https://img.shields.io/badge/status-active-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Made with ❤️](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red)
 
-## About Laravel
+**Batikku** adalah aplikasi berbasis Laravel yang dirancang untuk mengelola katalog dan transaksi batik lokal secara terstruktur. Website ini memiliki **fitur lengkap**, mulai dari login, register, manajemen data produk, hingga peran admin dan user yang terpisah.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ✨ Fitur Unggulan
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- 🔐 Autentikasi (Login, Register, Logout)
+- 🧑‍💼 Role-based Access (Admin & User)
+- 📦 CRUD Data Batik (nama, deskripsi, harga)
+- 📈 Dashboard Admin untuk kelola pengguna & katalog
+- 🧭 Flow pengguna jelas dan lengkap, dari login hingga pembelian
+- 🔒 Keamanan data melalui validasi form & pengecekan role
+- 📁 Struktur project rapi dan mengikuti standar Laravel
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🧭 Flow Aplikasi
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+1. **User** membuka halaman utama dan diarahkan ke halaman login.
+2. Jika belum punya akun, bisa daftar melalui halaman register.
+3. Setelah login berhasil:
+   - Jika `admin`, akan diarahkan ke halaman manajemen data (user dan barang).
+   - Jika `user`, bisa melihat katalog produk batik dan melakukan pembelian.
+4. Seluruh data produk dikelola dengan sistem CRUD oleh admin.
+5. Data pengguna dapat dikontrol melalui panel admin untuk memastikan keamanan dan keteraturan sistem.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🚀 Cara Menjalankan Project Ini
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+git clone https://github.com/altttttttivannn/Batikku.git
+cd Batikku
+composer install
+cp .env.example .env
+php artisan key:generate
+# Konfigurasi database di .env
+php artisan migrate
+php artisan serve
